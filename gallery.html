@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,12 +29,15 @@
             color: #1a1a1a;
             box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
         }
+
         .gallery-item {
             transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .gallery-item.hidden {
             display: none;
         }
+
         .lightbox {
             display: none;
             position: fixed;
@@ -42,21 +46,24 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.95);
+            background-color: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
         }
+
         .lightbox.active {
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         .lightbox img {
             max-width: 90%;
             max-height: 90%;
             object-fit: contain;
             border-radius: 0;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
         }
+
         .close-lightbox {
             position: absolute;
             top: 30px;
@@ -66,85 +73,92 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
         .close-lightbox:hover {
             transform: scale(1.2);
             color: #ffffff;
         }
-        
+
         /* Enhanced masonry grid layout styles for better responsiveness */
         .masonry-grid {
             column-count: 1;
             column-gap: 1.5rem;
         }
-        
+
         @media (min-width: 640px) {
             .masonry-grid {
                 column-count: 2;
                 column-gap: 2rem;
             }
         }
-        
+
         @media (min-width: 1024px) {
             .masonry-grid {
                 column-count: 3;
                 column-gap: 2.5rem;
             }
         }
-        
+
         @media (min-width: 1280px) {
             .masonry-grid {
                 column-count: 4;
                 column-gap: 3rem;
             }
         }
-        
+
         @media (min-width: 1536px) {
             .masonry-grid {
                 column-count: 5;
                 column-gap: 3rem;
             }
         }
-        
+
         .masonry-item {
             break-inside: avoid;
             margin-bottom: 1.5rem;
             display: inline-block;
             width: 100%;
         }
-        
+
         @media (min-width: 640px) {
             .masonry-item {
                 margin-bottom: 2rem;
             }
         }
-        
+
         @media (min-width: 1024px) {
             .masonry-item {
                 margin-bottom: 2.5rem;
             }
         }
-        
+
         /* Updated animations for black/white theme */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         .animate-fade-in {
             animation: fadeInUp 0.8s ease-out both;
         }
-        
+
         .shadow-3xl {
             box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
         }
@@ -153,7 +167,7 @@
         .hover-lift {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .hover-lift:hover {
             transform: translateY(-12px) scale(1.02);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
@@ -161,6 +175,7 @@
     </style>
 </head>
 <!-- Updated body background to lighter charcoal -->
+
 <body class="bg-charcoal text-accent-white">
     <!-- Updated navigation with black/white theme -->
     <nav class="bg-charcoal/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-white/10">
@@ -170,28 +185,38 @@
                     <h1 class="text-2xl font-bold text-accent-white">Marwan Interiors</h1>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-medium-gray hover:text-accent-white focus:outline-none focus:text-accent-white transition-colors">
+                    <button id="mobile-menu-button"
+                        class="text-medium-gray hover:text-accent-white focus:outline-none focus:text-accent-white transition-colors">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-medium-gray hover:text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">Home</a>
-                        <a href="gallery.html" class="text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">Gallery</a>
-                        <a href="about.html" class="text-medium-gray hover:text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">About</a>
-                        <a href="contact.html" class="text-medium-gray hover:text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">Contact</a>
+                        <a href="index.html"
+                            class="text-medium-gray hover:text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">Home</a>
+                        <a href="gallery.html"
+                            class="text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">Gallery</a>
+                        <a href="about.html"
+                            class="text-medium-gray hover:text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">About</a>
+                        <a href="contact.html"
+                            class="text-medium-gray hover:text-accent-white px-3 py-2 rounded-none text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
             </div>
             <!-- Mobile menu dropdown -->
             <div id="mobile-menu" class="md:hidden hidden bg-charcoal/95 backdrop-blur-md border-t border-white/10">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.html" class="text-medium-gray hover:text-accent-white hover:bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">Home</a>
-                    <a href="gallery.html" class="text-accent-white bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">Gallery</a>
-                    <a href="about.html" class="text-medium-gray hover:text-accent-white hover:bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">About</a>
-                    <a href="contact.html" class="text-medium-gray hover:text-accent-white hover:bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">Contact</a>
+                    <a href="index.html"
+                        class="text-medium-gray hover:text-accent-white hover:bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">Home</a>
+                    <a href="gallery.html"
+                        class="text-accent-white bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">Gallery</a>
+                    <a href="about.html"
+                        class="text-medium-gray hover:text-accent-white hover:bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">About</a>
+                    <a href="contact.html"
+                        class="text-medium-gray hover:text-accent-white hover:bg-white/10 block px-3 py-2 rounded-none text-base font-medium transition-colors">Contact</a>
                 </div>
             </div>
         </div>
@@ -201,15 +226,16 @@
     <section class="relative py-32 overflow-hidden">
         <!-- Background image -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
-                 alt="Beautiful interior gallery showcase" 
-                 class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
+                alt="Beautiful interior gallery showcase" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40"></div>
         </div>
-        
+
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left z-10">
             <h1 class="text-6xl md:text-8xl font-bold text-accent-white mb-8 leading-tight">Our Design Gallery</h1>
-            <p class="text-xl md:text-2xl text-accent-white/90 max-w-3xl leading-relaxed">Explore our curated collection of beautiful furniture pieces and interior design inspirations that bring warmth and style to every space.</p>
+            <p class="text-xl md:text-2xl text-accent-white/90 max-w-3xl leading-relaxed">Explore our curated collection
+                of beautiful furniture pieces and interior design inspirations that bring warmth and style to every
+                space.</p>
         </div>
     </section>
 
@@ -217,12 +243,22 @@
     <section class="py-12 bg-accent-white border-y border-medium-gray/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center gap-4 md:gap-6">
-                <button class="filter-btn active px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base" data-filter="all">All Designs</button>
-                <button class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base" data-filter="living">Pazia/Curtains</button>
-                <button class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base" data-filter="bedroom">Kitchen</button>
-                <button class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base" data-filter="kitchen">Pergolas</button>
-                <button class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base" data-filter="office">Interior</button>
-                <button class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base" data-filter="bathroom">Cabinet</button>
+                <button
+                    class="filter-btn active px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base"
+                    data-filter="all">All Designs</button>
+                <button
+                    class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base"
+                    data-filter="living">Pazia / Curtains</button>
+                <!-- <button class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base" data-filter="bedroom">Kitchen</button> -->
+                <button
+                    class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base"
+                    data-filter="kitchen">Pergolas</button>
+                <button
+                    class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base"
+                    data-filter="office">Interior</button>
+                <button
+                    class="filter-btn px-6 md:px-8 py-3 md:py-4 rounded-none bg-deep-black text-accent-white hover:bg-accent-white hover:text-deep-black transition-all duration-500 transform hover:scale-105 font-semibold border border-deep-black text-sm md:text-base"
+                    data-filter="bathroom">Cabinet</button>
             </div>
         </div>
     </section>
@@ -232,194 +268,304 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="masonry-grid" id="galleryGrid">
                 <!-- Curtains Designs -->
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Modern Scandinavian Curtains" style="animation-delay: 0.1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Modern Scandinavian Curtains" style="animation-delay: 0.1s;">
                     <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/pazia/pazia_1.jpg" alt="Modern Scandinavian Curtains" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_1.jpg" alt="Modern Scandinavian Curtains"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Modern Scandinavian</h4>
                             <p class="text-xs md:text-sm">Clean lines and Marwan textures</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Modern Scandinavian Living</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Clean lines and Marwan textures create the perfect harmony</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Modern Scandinavian Living</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Clean lines and Marwan textures
+                            create the perfect harmony</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Luxury Contemporary Curtains" style="animation-delay: 0.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Luxury Contemporary Curtains" style="animation-delay: 0.2s;">
                     <div class="relative h-80 sm:h-88 md:h-96 overflow-hidden">
-                        <img src="images/pazia/pazia_2.jpg" alt="Luxury Contemporary 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_2.jpg" alt="Luxury Contemporary 2"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Luxury Contemporary</h4>
                             <p class="text-xs md:text-sm">Elegant sophistication meets comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Luxury Contemporary</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Elegant sophistication meets comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Luxury Contemporary</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Elegant sophistication meets
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_3.jpg" alt="Marwan Reading 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_3.jpg" alt="Marwan Reading 3"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_4.jpg" alt="Marwan Reading 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_4.jpg" alt="Marwan Reading 4"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_6.jpg" alt="Marwan Reading 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_6.jpg" alt="Marwan Reading 6"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_7.jpg" alt="Marwan Reading 7" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_7.jpg" alt="Marwan Reading 7"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_8.jpg" alt="Marwan Reading 8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_8.jpg" alt="Marwan Reading 8"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_9.jpg" alt="Marwan Reading 9" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_9.jpg" alt="Marwan Reading 9"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_10.jpg" alt="Marwan Reading 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_10.jpg" alt="Marwan Reading 10"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_11.jpg" alt="Marwan Reading 11" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_11.jpg" alt="Marwan Reading 11"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_12.jpg" alt="Marwan Reading 12" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_12.jpg" alt="Marwan Reading 12"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="living" data-title="Marwan Reading Corner" style="animation-delay: 1s;">
                     <div class="relative h-56 sm:h-60 md:h-64 overflow-hidden">
-                        <img src="images/pazia/pazia_13.jpg" alt="Marwan Reading 13" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Curtains</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pazia/pazia_13.jpg" alt="Marwan Reading 13"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Curtains</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Marwan Reading Corner</h4>
                             <p class="text-xs md:text-sm">Your personal escape space</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Reading Corner</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Marwan Reading Corner</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Your personal escape space</p>
                     </div>
                 </div>
@@ -430,23 +576,9 @@
 
 
                 <!-- Kitchen Designs -->
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bedroom" data-title="Marwan Bohemian Kitchen" style="animation-delay: 0.3s;">
-                    <div class="relative h-60 sm:h-68 md:h-72 overflow-hidden">
-                        <img src="images/Kitchen/kitchen_1.jpg" alt="Marwan Bohemian Kitchen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Kitchen</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <h4 class="text-base md:text-lg font-bold mb-1">Marwan Bohemian Kitchen</h4>
-                            <p class="text-xs md:text-sm">Warm textures and earthy tones</p>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Marwan Bohemian Kitchen</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Warm textures and earthy tones create a serene atmosphere</p>
-                    </div>
-                </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bedroom" data-title="Minimalist Master Kitchen" style="animation-delay: 0.4s;">
+
+                <!-- <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bedroom" data-title="Minimalist Master Kitchen" style="animation-delay: 0.4s;">
                     <div class="relative h-72 sm:h-80 md:h-88 overflow-hidden">
                         <img src="images/Kitchen/kitchen_2.jpg" alt="Minimalist Master Kitchen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
@@ -460,7 +592,7 @@
                         <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Minimalist Master Kitchen</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Serene simplicity for peaceful rest</p>
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -470,179 +602,289 @@
 
 
                 <!-- Pergolas Designs -->
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Modern Farmhouse Pergolas" style="animation-delay: 0.5s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Modern Farmhouse Pergolas" style="animation-delay: 0.5s;">
                     <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/pergolas/pergolas_1.jpg" alt="Modern Farmhouse Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_1.jpg" alt="Modern Farmhouse Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Modern Farmhouse Pergolas</h4>
                             <p class="text-xs md:text-sm">Rustic charm meets modern function</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Modern Farmhouse Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Rustic charm meets modern function</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Modern Farmhouse Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Rustic charm meets modern
+                            function</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Sleek Contemporary Pergolas" style="animation-delay: 0.6s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Sleek Contemporary Pergolas" style="animation-delay: 0.6s;">
                     <div class="relative h-60 sm:h-68 md:h-72 overflow-hidden">
-                        <img src="images/pergolas/pergolas_2.jpg" alt="Sleek Contemporary Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_2.jpg" alt="Sleek Contemporary Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Sleek Contemporary Pergolas</h4>
                             <p class="text-xs md:text-sm">Clean lines and premium finishes</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Sleek Contemporary Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Clean lines and premium finishes</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Sleek Contemporary Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Clean lines and premium
+                            finishes</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_3.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_3.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_4.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_4.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_5.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_5.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_6.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_6.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_7.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_7.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_8.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_8.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_9.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_9.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/pergolas_12.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/pergolas_12.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="kitchen" data-title="Industrial Chic Pergolas" style="animation-delay: 1.2s;">
                     <div class="relative h-60 sm:h-64 md:h-68 overflow-hidden">
-                        <img src="images/pergolas/prgolas_13.jpg" alt="Industrial Chic Pergolas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Pergolas</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/pergolas/prgolas_13.jpg" alt="Industrial Chic Pergolas"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Pergolas</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Industrial Chic Pergolas</h4>
                             <p class="text-xs md:text-sm">Raw materials meet refined style</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Industrial Chic Pergolas</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined style</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Industrial Chic Pergolas</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Raw materials meet refined
+                            style</p>
                     </div>
                 </div>
 
@@ -651,259 +893,418 @@
 
 
                 <!-- Interior Designs -->
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Creative Home Interior" style="animation-delay: 0.7s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Creative Home Interior" style="animation-delay: 0.7s;">
                     <div class="relative h-68 sm:h-76 md:h-84 overflow-hidden">
-                        <img src="images/interior/interior_1.jpg" alt="Creative Home Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_1.jpg" alt="Creative Home Interior"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Creative Home Interior</h4>
                             <p class="text-xs md:text-sm">Inspiring workspace design</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Creative Home Interior</h3>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Creative Home Interior</h3>
                         <p class="text-sm md:text-base text-medium-gray leading-relaxed">Inspiring workspace design</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_2.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_2.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_3.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_3.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_5.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_5.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_6.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_6.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_7.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_7.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_8.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_8.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_9.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_9.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_10.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_10.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_11.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_11.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_12.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_12.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_13.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_13.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_14.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_14.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_15.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_15.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_16.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_16.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="office" data-title="Executive Study Room" style="animation-delay: 0.8s;">
                     <div class="relative h-64 sm:h-72 md:h-76 overflow-hidden">
-                        <img src="images/interior/interior_17.jpg" alt="Executive Study Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Interior</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/interior/interior_17.jpg" alt="Executive Study Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Interior</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Executive Study Room</h4>
                             <p class="text-xs md:text-sm">Professional elegance and comfort</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Executive Study Room</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and comfort</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Executive Study Room</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Professional elegance and
+                            comfort</p>
                     </div>
                 </div>
 
@@ -923,145 +1324,60 @@
                     </div>
                 </div> -->
 
-
-
-
-
                 <!-- Cabinet Designs -->
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
                     <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_1.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/cabinet/cabinet_pazia_5.jpg" alt="Spa-Like Cabinet Retreat"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Cabinet</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
                             <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Spa-Like Cabinet Retreat</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined
+                        </p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
+                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in"
+                    data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
                     <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_2.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                        <img src="images/Kitchen/kitchen_1.jpg" alt="Spa-Like Cabinet Retreat"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">
+                            Cabinet</div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                             <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
                             <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
                         </div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
+                        <h3
+                            class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">
+                            Spa-Like Cabinet Retreat</h3>
+                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined
+                        </p>
                     </div>
                 </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
-                    <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_3.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
-                            <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
-                    </div>
-                </div>
 
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
-                    <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_4.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
-                            <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
-                    <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_5.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
-                            <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
-                    <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_6.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
-                            <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
-                    <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_7.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
-                            <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
-                    </div>
-                </div>
-
-                <div class="masonry-item gallery-item group bg-accent-white rounded-none overflow-hidden shadow-xl hover:shadow-3xl hover-lift cursor-pointer animate-fade-in" data-category="bathroom" data-title="Spa-Like Cabinet Retreat" style="animation-delay: 0.9s;">
-                    <div class="relative h-64 sm:h-72 md:h-80 overflow-hidden">
-                        <img src="images/cabinet/cabinet_pazia_8.jpg" alt="Spa-Like Cabinet Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 lightbox-trigger">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-xs md:text-sm font-bold shadow-lg">Cabinet</div>
-                        <div class="absolute bottom-4 left-4 right-4 text-accent-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <h4 class="text-base md:text-lg font-bold mb-1">Spa-Like Cabinet Retreat</h4>
-                            <p class="text-xs md:text-sm">Luxury and relaxation combined</p>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg md:text-xl font-bold text-deep-black mb-3 group-hover:text-medium-gray transition-colors">Spa-Like Cabinet Retreat</h3>
-                        <p class="text-sm md:text-base text-medium-gray leading-relaxed">Luxury and relaxation combined</p>
-                    </div>
-                </div>
-
-                <!-- Additional designs for masonry variety -->
-                
-
-                
-
-                
             </div>
         </div>
     </section>
@@ -1078,15 +1394,20 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="col-span-1 md:col-span-2">
                     <h3 class="text-2xl font-bold text-accent-white mb-4">Marwan Interiors</h3>
-                    <p class="text-medium-gray mb-4">Creating beautiful, comfortable living spaces that reflect your personality and lifestyle.</p>
+                    <p class="text-medium-gray mb-4">Creating beautiful, comfortable living spaces that reflect your
+                        personality and lifestyle.</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-medium-gray hover:text-accent-white transition-colors">Home</a></li>
-                        <li><a href="gallery.html" class="text-medium-gray hover:text-accent-white transition-colors">Gallery</a></li>
-                        <li><a href="about.html" class="text-medium-gray hover:text-accent-white transition-colors">About Us</a></li>
-                        <li><a href="contact.html" class="text-medium-gray hover:text-accent-white transition-colors">Contact</a></li>
+                        <li><a href="index.html"
+                                class="text-medium-gray hover:text-accent-white transition-colors">Home</a></li>
+                        <li><a href="gallery.html"
+                                class="text-medium-gray hover:text-accent-white transition-colors">Gallery</a></li>
+                        <li><a href="about.html"
+                                class="text-medium-gray hover:text-accent-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html"
+                                class="text-medium-gray hover:text-accent-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div>
@@ -1106,7 +1427,7 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.filter-btn');
             const galleryItems = document.querySelectorAll('.gallery-item');
             const lightbox = document.getElementById('lightbox');
@@ -1116,15 +1437,15 @@
             const mobileMenu = document.getElementById('mobile-menu');
 
             // Mobile menu toggle
-            mobileMenuButton.addEventListener('click', function() {
+            mobileMenuButton.addEventListener('click', function () {
                 mobileMenu.classList.toggle('hidden');
             });
 
             // Filter functionality with enhanced animations
             filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const filter = this.getAttribute('data-filter');
-                    
+
                     // Update active button with animation
                     filterButtons.forEach(btn => {
                         btn.classList.remove('active');
@@ -1132,7 +1453,7 @@
                     });
                     this.classList.add('active');
                     this.style.transform = 'scale(1.1)';
-                    
+
                     // Filter items with staggered animation
                     galleryItems.forEach((item, index) => {
                         if (filter === 'all' || item.getAttribute('data-category') === filter) {
@@ -1149,17 +1470,17 @@
 
             // Lightbox functionality
             document.querySelectorAll('.lightbox-trigger').forEach(img => {
-                img.addEventListener('click', function() {
+                img.addEventListener('click', function () {
                     lightboxImg.src = this.src;
                     lightbox.classList.add('active');
                 });
             });
 
-            closeLightbox.addEventListener('click', function() {
+            closeLightbox.addEventListener('click', function () {
                 lightbox.classList.remove('active');
             });
 
-            lightbox.addEventListener('click', function(e) {
+            lightbox.addEventListener('click', function (e) {
                 if (e.target === lightbox) {
                     lightbox.classList.remove('active');
                 }
@@ -1167,4 +1488,5 @@
         });
     </script>
 </body>
+
 </html>
