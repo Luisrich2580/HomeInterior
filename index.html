@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,13 +56,16 @@
             backdrop-filter: blur(10px);
             background: rgba(26, 26, 26, 0.85);
         }
+
         .hover-lift {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .hover-lift:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
+
         .parallax-bg {
             background-attachment: fixed;
             background-position: center;
@@ -71,27 +75,37 @@
     </style>
 </head>
 <!-- Updated body background to lighter charcoal with white text -->
+
 <body class="bg-charcoal text-accent-white overflow-x-hidden">
     <!-- Updated navigation with black/white theme -->
     <nav class="glass-effect fixed top-0 w-full z-50 border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 animate-fade-in">
-                    <h1 class="text-3xl font-bold text-accent-white">Marwan Interiors</h1>
+                <div class="flex-shrink-0 animate-fade-in flex items-center">
+                    <img src="images/logo_white.png" alt="Marwan Interiors Logo" class="h-36 w-auto">
+                    <h1 class="text-3xl font-bold text-accent-white ">Marwan Interiors</h1>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-accent-white hover:text-medium-gray px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Home</a>
-                        <a href="gallery.html" class="text-medium-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Gallery</a>
-                        <a href="about.html" class="text-medium-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">About</a>
-                        <a href="contact.html" class="text-medium-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Contact</a>
-                        <button class="bg-accent-white hover:bg-light-gray text-deep-black px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105">Get Quote</button>
+                        <a href="index.html"
+                            class="text-accent-white hover:text-medium-gray px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Home</a>
+                        <a href="gallery.html"
+                            class="text-medium-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Gallery</a>
+                        <a href="about.html"
+                            class="text-medium-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">About</a>
+                        <a href="contact.html"
+                            class="text-medium-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Contact</a>
+                        <button
+                            class="bg-accent-white hover:bg-light-gray text-deep-black px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105">Get
+                            Quote</button>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-medium-gray hover:text-accent-white p-2 rounded-lg transition-colors">
+                    <button id="mobile-menu-btn"
+                        class="text-medium-gray hover:text-accent-white p-2 rounded-lg transition-colors">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
@@ -100,10 +114,14 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden glass-effect border-t border-white/10">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-accent-white hover:text-medium-gray rounded-md">Home</a>
-                <a href="gallery.html" class="block px-3 py-2 text-medium-gray hover:text-accent-white rounded-md">Gallery</a>
-                <a href="about.html" class="block px-3 py-2 text-medium-gray hover:text-accent-white rounded-md">About</a>
-                <a href="contact.html" class="block px-3 py-2 text-medium-gray hover:text-accent-white rounded-md">Contact</a>
+                <a href="index.html"
+                    class="block px-3 py-2 text-accent-white hover:text-medium-gray rounded-md">Home</a>
+                <a href="gallery.html"
+                    class="block px-3 py-2 text-medium-gray hover:text-accent-white rounded-md">Gallery</a>
+                <a href="about.html"
+                    class="block px-3 py-2 text-medium-gray hover:text-accent-white rounded-md">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-medium-gray hover:text-accent-white rounded-md">Contact</a>
             </div>
         </div>
     </nav>
@@ -112,12 +130,11 @@
     <section class="relative min-h-screen flex items-center overflow-hidden">
         <!-- Hero background image -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
-                 alt="Beautiful interior design" 
-                 class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
+                alt="Beautiful interior design" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         </div>
-        
+
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Left-aligned text content as per requirements -->
@@ -127,18 +144,21 @@
                         <span class="block">Living Space</span>
                     </h1>
                     <p class="text-xl md:text-2xl text-accent-white/90 mb-12 max-w-2xl leading-relaxed">
-                        Discover beautiful, Marwan furniture and interior designs that transform your house into a warm, welcoming home.
+                        Discover beautiful, Marwan furniture and interior designs that transform your house into a warm,
+                        welcoming home.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="gallery.html" class="bg-accent-white hover:bg-light-gray text-deep-black font-semibold py-4 px-10 rounded-none text-lg transition-all duration-300 transform hover:scale-105">
+                        <a href="gallery.html"
+                            class="bg-accent-white hover:bg-light-gray text-deep-black font-semibold py-4 px-10 rounded-none text-lg transition-all duration-300 transform hover:scale-105">
                             Explore Our Projects
                         </a>
-                        <button class="border-2 border-accent-white text-accent-white hover:bg-accent-white hover:text-deep-black font-semibold py-4 px-10 rounded-none text-lg transition-all duration-300 transform hover:scale-105">
+                        <button
+                            class="border-2 border-accent-white text-accent-white hover:bg-accent-white hover:text-deep-black font-semibold py-4 px-10 rounded-none text-lg transition-all duration-300 transform hover:scale-105">
                             Watch Video
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Right side brief description -->
                 <div class="text-right">
                     <!-- <p class="text-lg text-accent-white/80 max-w-md ml-auto leading-relaxed">
@@ -178,23 +198,32 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-left mb-20">
                 <h2 class="text-5xl md:text-7xl font-bold text-accent-white mb-6">Featured Designs</h2>
-                <p class="text-xl text-medium-gray max-w-3xl leading-relaxed">Handpicked furniture pieces and interior setups that bring comfort and style to your home with our signature touch.</p>
+                <p class="text-xl text-medium-gray max-w-3xl leading-relaxed">Handpicked furniture pieces and interior
+                    setups that bring comfort and style to your home with our signature touch.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Featured Item 1 -->
                 <div class="group hover-lift bg-accent-white rounded-none overflow-hidden shadow-xl">
                     <div class="relative h-80 overflow-hidden">
-                        <img src="images/pergolas/Cantilevered pergola.jpeg" alt="Marwan Living Room" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-sm font-medium">Popular</div>
+                        <img src="images/pergolas/Cantilevered pergola.jpeg" alt="Marwan Living Room"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-sm font-medium">
+                            Popular</div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-deep-black mb-3">Pergola</h3>
-                        <p class="text-medium-gray mb-4 leading-relaxed">An outdoor structure constructed of pillars that support a flat grid of cross beams and rafters</p>
+                        <p class="text-medium-gray mb-4 leading-relaxed">An outdoor structure constructed of pillars
+                            that support a flat grid of cross beams and rafters</p>
                         <div class="flex items-center justify-between">
                             <span class="text-deep-black font-semibold">From $2,500</span>
-                            <button class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View Details</button>
+                            <button
+                                class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View
+                                Details</button>
                         </div>
                     </div>
                 </div>
@@ -202,16 +231,26 @@
                 <!-- Featured Item 2 -->
                 <div class="group hover-lift bg-accent-white rounded-none overflow-hidden shadow-xl">
                     <div class="relative h-80 overflow-hidden">
-                        <img src="images/pergolas/21+ Stunning Dark Beige Kitchen Cabinet Ideas.jpeg" alt="Elegant Bedroom" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-sm font-medium">New</div>
+                        <img src="images/pergolas/21+ Stunning Dark Beige Kitchen Cabinet Ideas.jpeg"
+                            alt="Elegant Bedroom"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-sm font-medium">
+                            New</div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-deep-black mb-3">Kitchen Cabinet</h3>
-                        <p class="text-medium-gray mb-4 leading-relaxed">Built-in furniture installed in many kitchens for storage of food, cooking equipment, and often silverware and dishes for table service</p>
+                        <p class="text-medium-gray mb-4 leading-relaxed">Built-in furniture installed in many kitchens
+                            for storage of food, cooking equipment, and often silverware and dishes for table service
+                        </p>
                         <div class="flex items-center justify-between">
                             <span class="text-deep-black font-semibold">From $3,200</span>
-                            <button class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View Details</button>
+                            <button
+                                class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View
+                                Details</button>
                         </div>
                     </div>
                 </div>
@@ -219,16 +258,25 @@
                 <!-- Featured Item 3 -->
                 <div class="group hover-lift bg-accent-white rounded-none overflow-hidden shadow-xl">
                     <div class="relative h-80 overflow-hidden">
-                        <img src="images/pergolas/We are Vocarte, blending your style with art to….jpeg" alt="Modern Dining" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-sm font-medium">Trending</div>
+                        <img src="images/pergolas/We are Vocarte, blending your style with art to….jpeg"
+                            alt="Modern Dining"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute top-4 right-4 bg-deep-black text-accent-white px-3 py-1 rounded-none text-sm font-medium">
+                            Trending</div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold text-deep-black mb-3">Curtains</h3>
-                        <p class="text-medium-gray mb-4 leading-relaxed">Window decor and complete the overall appearance of the interior of the house.</p>
+                        <p class="text-medium-gray mb-4 leading-relaxed">Window decor and complete the overall
+                            appearance of the interior of the house.</p>
                         <div class="flex items-center justify-between">
                             <span class="text-deep-black font-semibold">From $1,800</span>
-                            <button class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View Details</button>
+                            <button
+                                class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View
+                                Details</button>
                         </div>
                     </div>
                 </div>
@@ -239,26 +287,34 @@
                 <h3 class="text-4xl font-bold text-accent-white text-left mb-12">Design Gallery Highlights</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div class="group relative overflow-hidden rounded-none shadow-lg hover-lift">
-                        <img src="images/pazia/pazia_1.jpg" alt="Modern Kitchen" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <img src="images/pazia/pazia_1.jpg" alt="Modern Kitchen"
+                            class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                             <p class="text-accent-white p-4 font-semibold">Curtains</p>
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-none shadow-lg hover-lift">
-                        <img src="images/Kitchen/kitchen_1.jpg" alt="Home Office" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <img src="images/Kitchen/kitchen_1.jpg" alt="Home Office"
+                            class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                             <p class="text-accent-white p-4 font-semibold">Cabinet</p>
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-none shadow-lg hover-lift">
-                        <img src="images/pergolas/pergolas_7.jpg" alt="Luxury Bathroom" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <img src="images/pergolas/pergolas_7.jpg" alt="Luxury Bathroom"
+                            class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                             <p class="text-accent-white p-4 font-semibold">Pergola</p>
                         </div>
                     </div>
                     <div class="group relative overflow-hidden rounded-none shadow-lg hover-lift">
-                        <img src="images/interior/interior_14.jpg" alt="Kids Playroom" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <img src="images/interior/interior_14.jpg" alt="Kids Playroom"
+                            class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                             <p class="text-accent-white p-4 font-semibold">Interior</p>
                         </div>
                     </div>
@@ -272,45 +328,61 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Amazing Transformations</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">See how we've transformed ordinary spaces into extraordinary homes that our clients absolutely love.</p>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">See how we've transformed ordinary spaces into
+                    extraordinary homes that our clients absolutely love.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
                     <div class="hover-lift bg-gradient-to-br from-pastel-pink to-white p-8 rounded-3xl shadow-lg">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Before & After</h3>
                         <div class="grid grid-cols-2 gap-4 mb-6">
                             <div class="relative">
-                                <img src="images/pergolas/pergolas_1.jpg" alt="Before" class="w-full h-32 object-cover rounded-xl">
-                                <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">Before</div>
+                                <img src="images/pergolas/pergolas_1.jpg" alt="Before"
+                                    class="w-full h-32 object-cover rounded-xl">
+                                <div
+                                    class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                                    Before</div>
                             </div>
                             <div class="relative">
-                                <img src="images/pergolas/pergolas_3.jpg" alt="After" class="w-full h-32 object-cover rounded-xl">
-                                <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">After</div>
+                                <img src="images/pergolas/pergolas_3.jpg" alt="After"
+                                    class="w-full h-32 object-cover rounded-xl">
+                                <div
+                                    class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                                    After</div>
                             </div>
                         </div>
-                        <p class="text-gray-600">Complete Pergola makeover with modern furniture and warm color palette.</p>
+                        <p class="text-gray-600">Complete Pergola makeover with modern furniture and warm color palette.
+                        </p>
                     </div>
-                    
+
                     <div class="hover-lift bg-gradient-to-br from-pastel-green to-white p-8 rounded-3xl shadow-lg">
                         <h3 class="text-2xl font-bold text-gray-800 mb-4">Doors Renovation</h3>
                         <div class="grid grid-cols-2 gap-4 mb-6">
                             <div class="relative">
-                                <img src="images/ddd.jpg" alt="Before Kitchen" class="w-full h-32 object-cover rounded-xl">
-                                <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">Before</div>
+                                <img src="images/ddd.jpg" alt="Before Kitchen"
+                                    class="w-full h-32 object-cover rounded-xl">
+                                <div
+                                    class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                                    Before</div>
                             </div>
                             <div class="relative">
-                                <img src="images/interior/interior_13.jpg" alt="After Kitchen" class="w-full h-32 object-cover rounded-xl">
-                                <div class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">After</div>
+                                <img src="images/interior/interior_13.jpg" alt="After Kitchen"
+                                    class="w-full h-32 object-cover rounded-xl">
+                                <div
+                                    class="absolute top-2 left-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">
+                                    After</div>
                             </div>
                         </div>
                         <p class="text-gray-600">Modern transformation with marble countertops.</p>
                     </div>
                 </div>
-                
+
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Full Home Transformation" class="w-full h-96 object-cover rounded-3xl shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-3xl flex items-end">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+                        alt="Full Home Transformation" class="w-full h-96 object-cover rounded-3xl shadow-2xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-3xl flex items-end">
                         <div class="p-8 text-white">
                             <h3 class="text-2xl font-bold mb-2">Complete Home Makeover</h3>
                             <p class="text-white/90">From concept to completion in just 8 weeks</p>
@@ -326,32 +398,96 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Our Services</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From concept to completion, we provide comprehensive interior design services tailored to your lifestyle.</p>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">From concept to completion, we provide comprehensive
+                    interior design services tailored to your lifestyle.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group hover-lift bg-gradient-to-br from-pastel-pink to-white p-8 rounded-3xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-rose-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <div
+                    class="group hover-lift bg-gradient-to-br from-pastel-pink to-white p-8 rounded-3xl shadow-lg text-center">
+                    <div
+                        class="w-16 h-16 bg-rose-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <span class="text-2xl">🏠</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Full Home Design</h3>
-                    <p class="text-gray-600">Complete interior transformation from living rooms to bedrooms, creating cohesive beautiful spaces.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Residential Interior Design</h3>
+                    <ul class="text-gray-600 list-disc list-inside space-y-2 text-left">
+                        <li>Living room redesign</li>
+                        <li>Bedroom makeovers</li>
+                        <li>Kitchen and dining upgrades</li>
+                        <li>Custom storage solutions</li>
+                        <li>Color and material consultation</li>
+                    </ul>
                 </div>
-                
-                <div class="group hover-lift bg-gradient-to-br from-pastel-green to-white p-8 rounded-3xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+
+                <div
+                    class="group hover-lift bg-gradient-to-br from-pastel-green to-white p-8 rounded-3xl shadow-lg text-center">
+                    <div
+                        class="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <span class="text-2xl">🛋️</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Furniture Selection</h3>
-                    <p class="text-gray-600">Curated furniture pieces that perfectly match your style, budget, and functional needs.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Commercial & Office Interior</h3>
+                    <ul class="text-gray-600 list-disc list-inside space-y-2 text-left">
+                        <li>Office space planning</li>
+                        <li>Reception and lobby design</li>
+                        <li>Conference room setups</li>
+                        <li>Custom furniture solutions</li>
+                        <li>Brand-focused decor</li>
+                    </ul>
                 </div>
-                
-                <div class="group hover-lift bg-gradient-to-br from-warm-gray to-white p-8 rounded-3xl shadow-lg text-center">
-                    <div class="w-16 h-16 bg-rose-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+
+                <div
+                    class="group hover-lift bg-gradient-to-br from-warm-gray to-white p-8 rounded-3xl shadow-lg text-center">
+                    <div
+                        class="w-16 h-16 bg-rose-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <span class="text-2xl">🛃</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Custom Design & Styling</h3>
+                    <ul class="text-gray-600 list-disc list-inside space-y-2 text-left">
+                        <li>Custom furniture design</li>
+                        <li>Window treatments & curtains</li>
+                        <li>Wall art & decor selection</li>
+                        <li>Space planning & layout</li>
+                        <li>Personalized styling consultation</li>
+                    </ul>
+                </div>
+                <div
+                    class="group hover-lift bg-gradient-to-br from-warm-gray to-white p-8 rounded-3xl shadow-lg text-center">
+                    <div
+                        class="w-16 h-16 bg-rose-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <span class="text-2xl">🪑</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">AirBnB Design & Furnishing</h3>
+                    <ul class="text-gray-600 list-disc list-inside space-y-2 text-left">
+                        <li>Space planning for short-term rentals</li>
+                        <li>Furniture selection & installation</li>
+                        <li>Decor & styling for guest appeal</li>
+                        <li>Turnkey setup & staging</li>
+                        <li>Maintenance & refresh consultation</li>
+                    </ul>
+                </div>
+                <div
+                    class="group hover-lift bg-gradient-to-br from-warm-gray to-white p-8 rounded-3xl shadow-lg text-center">
+                    <div
+                        class="w-16 h-16 bg-rose-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                        <span class="text-2xl">💡</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Finishing & Installations</h3>
+                    <ul class="text-gray-600 list-disc list-inside space-y-2 text-left">
+                        <li>Gypsum Ceiling wall panels & partitions</li>
+                        <li>Marble sheets, PVC panels & Flooring</li>
+                        <li>Pargolas And outdoor structures</li>
+                        <li>Wardrobes & Cabinets</li>
+                    </ul>
+                </div>
+                <div
+                    class="group hover-lift bg-gradient-to-br from-warm-gray to-white p-8 rounded-3xl shadow-lg text-center">
+                    <div
+                        class="w-16 h-16 bg-rose-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <span class="text-2xl">💡</span>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Lighting Design</h3>
-                    <p class="text-gray-600">Strategic lighting solutions that enhance ambiance and functionality in every room.</p>
+                    <p class="text-gray-600">Strategic lighting solutions that enhance ambiance and functionality in
+                        every room.</p>
                 </div>
             </div>
         </div>
@@ -361,16 +497,21 @@
     <section class="py-24 bg-gradient-to-br from-pastel-pink via-soft-beige to-pastel-green">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">What Our Clients Say</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real stories from happy homeowners who transformed their spaces with our expert design team.</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-100 mb-6">What Our Clients Say</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Real stories from happy homeowners who transformed
+                    their spaces with our expert design team.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Testimonial 1 -->
                 <div class="hover-lift bg-white rounded-3xl p-10 shadow-xl relative">
-                    <div class="absolute -top-4 -left-4 w-8 h-8 bg-rose-accent rounded-full flex items-center justify-center text-white font-bold text-lg">"</div>
+                    <div
+                        class="absolute -top-4 -left-4 w-8 h-8 bg-rose-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        "</div>
                     <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-br from-rose-accent to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-xl">S</div>
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-rose-accent to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            S</div>
                         <div class="ml-4">
                             <h4 class="font-bold text-gray-800 text-lg">Sarah Johnson</h4>
                             <p class="text-gray-600">Homeowner</p>
@@ -379,14 +520,20 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic leading-relaxed">"Marwan Interiors transformed my living room into the most beautiful, comfortable space. I love coming home every day! The attention to detail was incredible."</p>
+                    <p class="text-gray-700 italic leading-relaxed">"Marwan Interiors transformed my living room into
+                        the most beautiful, comfortable space. I love coming home every day! The attention to detail was
+                        incredible."</p>
                 </div>
 
                 <!-- Testimonial 2 -->
                 <div class="hover-lift bg-white rounded-3xl p-10 shadow-xl relative">
-                    <div class="absolute -top-4 -left-4 w-8 h-8 bg-pastel-green rounded-full flex items-center justify-center text-white font-bold text-lg">"</div>
+                    <div
+                        class="absolute -top-4 -left-4 w-8 h-8 bg-pastel-green rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        "</div>
                     <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-br from-pastel-green to-green-400 rounded-full flex items-center justify-center text-white font-bold text-xl">M</div>
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-pastel-green to-green-400 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            M</div>
                         <div class="ml-4">
                             <h4 class="font-bold text-gray-800 text-lg">Michael Chen</h4>
                             <p class="text-gray-600">Interior Enthusiast</p>
@@ -395,14 +542,20 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic leading-relaxed">"The attention to detail and quality of furniture is exceptional. My bedroom has never felt more peaceful and stylish. Highly recommend their services!"</p>
+                    <p class="text-gray-700 italic leading-relaxed">"The attention to detail and quality of furniture is
+                        exceptional. My bedroom has never felt more peaceful and stylish. Highly recommend their
+                        services!"</p>
                 </div>
 
                 <!-- Testimonial 3 -->
                 <div class="hover-lift bg-white rounded-3xl p-10 shadow-xl relative">
-                    <div class="absolute -top-4 -left-4 w-8 h-8 bg-rose-accent rounded-full flex items-center justify-center text-white font-bold text-lg">"</div>
+                    <div
+                        class="absolute -top-4 -left-4 w-8 h-8 bg-rose-accent rounded-full flex items-center justify-center text-white font-bold text-lg">
+                        "</div>
                     <div class="flex items-center mb-6">
-                        <div class="w-16 h-16 bg-gradient-to-br from-rose-accent to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-xl">E</div>
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-rose-accent to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            E</div>
                         <div class="ml-4">
                             <h4 class="font-bold text-gray-800 text-lg">Emma Davis</h4>
                             <p class="text-gray-600">Design Lover</p>
@@ -411,7 +564,9 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic leading-relaxed">"From consultation to final setup, the entire experience was seamless. My dining room is now the heart of our home where memories are made."</p>
+                    <p class="text-gray-700 italic leading-relaxed">"From consultation to final setup, the entire
+                        experience was seamless. My dining room is now the heart of our home where memories are made."
+                    </p>
                 </div>
             </div>
         </div>
@@ -422,10 +577,14 @@
         <div class="absolute inset-0 bg-gradient-to-r from-rose-accent/20 to-pastel-green/20"></div>
         <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Stay Inspired</h2>
-            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Get the latest design trends, tips, and exclusive offers delivered to your inbox.</p>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Get the latest design trends, tips, and exclusive
+                offers delivered to your inbox.</p>
             <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-rose-accent/50">
-                <button class="bg-rose-accent hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">Subscribe ✨</button>
+                <input type="email" placeholder="Enter your email"
+                    class="flex-1 px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-rose-accent/50">
+                <button
+                    class="bg-rose-accent hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">Subscribe
+                    ✨</button>
             </div>
         </div>
     </section>
@@ -436,16 +595,23 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-3xl font-bold text-gradient mb-6">✨ Marwan Interiors</h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed max-w-md">Creating beautiful, comfortable living spaces that reflect your personality and lifestyle. Your dream home is just a consultation away.</p>
+                    <h3 class="text-3xl font-bold text-gradient mb-6">
+                        <img src="images/logo_white.png" alt="o" class="h-32 w-32 inline-block mr-2">
+                        Marwan Interiors
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed max-w-md">Creating beautiful, comfortable living spaces
+                        that reflect your personality and lifestyle. Your dream home is just a consultation away.</p>
                     <div class="flex space-x-6">
-                        <a href="#" class="w-12 h-12 bg-rose-accent rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-all duration-300 transform hover:scale-110">
+                        <a href="#"
+                            class="w-12 h-12 bg-rose-accent rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-all duration-300 transform hover:scale-110">
                             <span class="text-lg">📘</span>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-rose-accent rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-all duration-300 transform hover:scale-110">
+                        <a href="#"
+                            class="w-12 h-12 bg-rose-accent rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-all duration-300 transform hover:scale-110">
                             <span class="text-lg">📷</span>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-rose-accent rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-all duration-300 transform hover:scale-110">
+                        <a href="#"
+                            class="w-12 h-12 bg-rose-accent rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-all duration-300 transform hover:scale-110">
                             <span class="text-lg">📌</span>
                         </a>
                     </div>
@@ -453,24 +619,33 @@
                 <div>
                     <h4 class="text-xl font-bold mb-6 text-rose-accent">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">Home</a></li>
-                        <li><a href="gallery.html" class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">Gallery</a></li>
-                        <li><a href="about.html" class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">About Us</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">Contact</a></li>
+                        <li><a href="index.html"
+                                class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">Home</a>
+                        </li>
+                        <li><a href="gallery.html"
+                                class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">Gallery</a>
+                        </li>
+                        <li><a href="about.html"
+                                class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">About
+                                Us</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-300 hover:text-rose-accent transition-colors hover:translate-x-2 transform duration-300 block">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-6 text-rose-accent">Contact Info</h4>
                     <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center"><span class="mr-2">📍</span> 123 Design Street, Marwan City</li>
-                        <li class="flex items-center"><span class="mr-2">📞</span> (555) 123-4567</li>
+                        <li class="flex items-center"><span class="mr-2">📍</span>Dar Es Salaam Tanzania</li>
+                        <li class="flex items-center"><span class="mr-2">📞</span> +255 745 240 705</li>
                         <li class="flex items-center"><span class="mr-2">✉️</span> hello@cozyinteriors.com</li>
                         <li class="flex items-center"><span class="mr-2">🕒</span> Mon-Fri: 9AM-6PM</li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 Marwan Interiors. All rights reserved. Made with ❤️ for beautiful homes.</p>
+                <p class="text-gray-400">&copy; 2025 Marwan Interiors. All rights reserved. <br> Made by Stack
+                    Technologies.</p>
             </div>
         </div>
     </footer>
@@ -480,7 +655,7 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
@@ -510,4 +685,5 @@
         });
     </script>
 </body>
+
 </html>
