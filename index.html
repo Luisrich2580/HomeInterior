@@ -82,18 +82,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo + Brand -->
-                <div class="flex items-center space-x-3 animate-fade-in">
-                    <img src="images/logo_white.png" alt="Marwan Interiors Logo"
-                        class="h-10 sm:h-12 md:h-14 w-auto object-contain">
-                    <a href="index.html" class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-accent-white">
+                <a href="index.html" class="flex items-center  animate-fade-in">
+                    <img src="images/removed.png" alt="Marwan Interiors Logo"
+                        class="h-12 sm:h-16 md:h-16 lg:h-20 w-auto object-contain">
+                    <h3 class="text-xl sm:text-xl md:text-3xl lg:text-2xl font-bold text-accent-white">
                         Marwan Interiors
-                    </a>
-                </div>
+                    </h3>
+                </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="index.html"
-                        class="text-accent-white hover:text-medium-gray px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Home</a>
+                        class="text-dark-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Home</a>
                     <a href="gallery.html"
                         class="text-medium-gray hover:text-accent-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/10">Gallery</a>
                     <a href="about.html"
@@ -138,7 +138,7 @@
         </div>
     </nav>
 
-    
+
 
 
     <!-- Updated hero section with left-aligned text and large impactful image -->
@@ -234,12 +234,12 @@
                         <h3 class="text-2xl font-bold text-deep-black mb-3">Pergola</h3>
                         <p class="text-medium-gray mb-4 leading-relaxed">An outdoor structure constructed of pillars
                             that support a flat grid of cross beams and rafters</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-deep-black font-semibold">From $2,500</span>
+                        <!-- <div class="flex items-center justify-between">
+                            <span class="text-deep-black font-semibold"></span>
                             <button
                                 class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View
                                 Details</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -261,12 +261,12 @@
                         <p class="text-medium-gray mb-4 leading-relaxed">Built-in furniture installed in many kitchens
                             for storage of food, cooking equipment, and often silverware and dishes for table service
                         </p>
-                        <div class="flex items-center justify-between">
+                        <!-- <div class="flex items-center justify-between">
                             <span class="text-deep-black font-semibold">From $3,200</span>
                             <button
                                 class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View
                                 Details</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -287,12 +287,12 @@
                         <h3 class="text-2xl font-bold text-deep-black mb-3">Curtains</h3>
                         <p class="text-medium-gray mb-4 leading-relaxed">Window decor and complete the overall
                             appearance of the interior of the house.</p>
-                        <div class="flex items-center justify-between">
+                        <!-- <div class="flex items-center justify-between">
                             <span class="text-deep-black font-semibold">From $1,800</span>
                             <button
                                 class="bg-deep-black text-accent-white px-4 py-2 rounded-none text-sm hover:bg-charcoal transition-colors">View
                                 Details</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -610,10 +610,13 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-3xl font-bold text-gradient mb-6">
-                        <img src="images/logo_white.png" alt="o" class="h-32 w-32 inline-block mr-2">
-                        Marwan Interiors
+                    <h3
+                        class="flex items-center space-x-3 text-2xl sm:text-3xl md:text-4xl font-bold text-gradient mb-6">
+                        <img src="images/removed.png" alt="Marwan Interiors Logo"
+                            class="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain">
+                        <span>Marwan Interiors</span>
                     </h3>
+
                     <p class="text-gray-300 mb-6 leading-relaxed max-w-md">Creating beautiful, comfortable living spaces
                         that reflect your personality and lifestyle. Your dream home is just a consultation away.</p>
                     <div class="flex space-x-6">
@@ -690,17 +693,17 @@
         });
 
         // Add scroll effect to navigation
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('bg-white/90');
-            } else {
-                nav.classList.remove('bg-white/90');
-            }
-        });
+        //window.addEventListener('scroll', () => {
+        //    const nav = document.querySelector('nav');
+        //    if (window.scrollY > 100) {
+        //        nav.classList.add('bg-white/90');
+        //    } else {
+        //        nav.classList.remove('bg-white/90');
+        //    }
+        //});
 
 
-        
+
     </script>
 </body>
 
